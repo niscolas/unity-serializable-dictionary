@@ -3,11 +3,10 @@ using UnityEngine;
 
 namespace SerializableDictionary
 {
-    
     [Serializable]
-    public class OnlyValueSerializeReferenceKeyValuePair<TKey, TValue> : IKeyValuePair<TKey, TValue>
+    public class SerializeReferenceKeyValuePair<TKey, TValue> : IKeyValuePair<TKey, TValue>
     {
-        [SerializeField]
+        [SerializeReference, SubclassSelector]
         private TKey _key;
 
         [SerializeReference, SubclassSelector]

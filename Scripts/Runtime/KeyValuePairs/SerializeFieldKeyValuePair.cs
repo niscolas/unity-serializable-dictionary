@@ -3,14 +3,13 @@ using UnityEngine;
 
 namespace SerializableDictionary
 {
-    
     [Serializable]
-    public class FullSerializeReferenceKeyValuePair<TKey, TValue> : IKeyValuePair<TKey, TValue>
+    public class SerializeFieldKeyValuePair<TKey, TValue> : IKeyValuePair<TKey, TValue>
     {
-        [SerializeReference, SubclassSelector]
+        [SerializeField]
         private TKey _key;
 
-        [SerializeReference, SubclassSelector]
+        [SerializeField]
         private TValue _value;
 
         public TKey Key
